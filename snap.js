@@ -204,7 +204,9 @@
                         utils.events.addEvent(settings.element, utils.transitionCallback(), action.translate.easeCallback);
                         action.translate.x(n);
                     }
-                    
+                    if(n===0){
+                        settings.element.style[cache.vendor+'Transform'] = '';
+                    }
                 },
                 x: function(n) {
                     if( (settings.disable=='left' && n>0) ||
